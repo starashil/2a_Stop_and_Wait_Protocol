@@ -11,7 +11,7 @@ To write a python program to perform stop and wait protocol
 ## PROGRAM
 
 ## Client:
-
+"""
 import socket 
 s=socket.socket() 
 s.bind(('localhost',8000)) 
@@ -35,7 +35,8 @@ while True:
     s.send(ip.encode())
     print("MAC Address",s.recv(1024).decode())
 
-        
+"""
+
 ## OUTPUT
 
 ![Screenshot (105)](https://github.com/user-attachments/assets/c2fc48e7-b1f0-431a-9a79-4c1ec6fb08f7)
