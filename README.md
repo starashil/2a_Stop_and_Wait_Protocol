@@ -12,28 +12,12 @@ To write a python program to perform stop and wait protocol
 
 ## Client:
 
-import socket 
-s=socket.socket() 
-s.bind(('localhost',8000)) 
-s.listen(5) 
-c,addr=s.accept() 
-address={"165.165.80.80":"6A:08:AA:C2","165.165.79.1":"8A:BC:E3:FA"}; 
-while True:
-    ip=c.recv(1024).decode() 
-    try:
-        c.send(address[ip].encode()) 
-    except KeyError:
-        c.send("Not Found".encode())  
+![{3B0F6B0B-F0EE-4096-ADDC-A09BA53E9C79}](https://github.com/user-attachments/assets/3030bda6-7ff9-42db-ab29-5d40e8312bc8)
+
 
 ## Server:
 
-import socket 
-s=socket.socket() 
-s.connect(('localhost',8000)) 
-while True:
-    ip=input("Enter logical Address : ")
-    s.send(ip.encode())
-    print("MAC Address",s.recv(1024).decode())
+![{3E8F610D-A39A-4882-983A-3C4C52C235E7}](https://github.com/user-attachments/assets/64b29791-4b89-47e6-9676-a442e66718d1)
 
 
 ## OUTPUT
